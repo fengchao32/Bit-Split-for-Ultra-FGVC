@@ -64,7 +64,6 @@ This fork also registers MaskCOV models and data readers migrated from
 
 # Related Papers
 
-    Please cite our paper if it helps your research:
 
     @InProceedings{Wang_2020_ICML,
         author = {Wang, Peisong, Qiang Chen, Xiangyu He, and Cheng, Jian},
