@@ -4,7 +4,6 @@ BitSplit Post-trining Quantization
 Code for papers:
 * 'Towards Accurate Post-training Network Quantization via Bit-Split and Stitching', ICML 2020
 
-Bit-split is a novel post-training network quantization framework where no finetuning is needed. 
 
 
 
