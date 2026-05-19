@@ -6,21 +6,7 @@ Code for papers:
 
 Bit-split is a novel post-training network quantization framework where no finetuning is needed. 
 
-A8W4 model for ResNet-18:
 
-[BaiduCloud](https://pan.baidu.com/s/1vIrK7nIuMWZ2CkJ5jUpGWw) Extraction Code: bsci 
-
-[GoogleDrive](https://drive.google.com/drive/folders/1Tvnbk0RUJul_0pMcBFBKEduImuYVqp3C?usp=sharing)
-
-# Files:
-* main_quant_resnet18_twostep: slow version, separately extract features for different layers.
-* main_quant_resnet18_twostep_fast: fast version, extract features for all layers in parallel (should be accomplished in around 15 min).
-
-# Train:
-    CUDA_VISIBLE_DEVICES=0 python main_quant_resnet18_twostep_fast.py -a resnet18_quan --pretrained ~/data/cnn_models/pytorch/resnet/resnet18-5c106cde.pth --act-bit-width 8 --weight-bit-width 4
-
-# Test:
-    CUDA_VISIBLE_DEVICES=0 python main_quant_resnet18_twostep_fast.py -a resnet18_quan --pretrained ./resnet18_quan/A8W4/state_dict.pth --scales resnet18_quan/A8W4/act_8_scales.npy --act-bit-width 8 --weight-bit-width 4 --evaluate 
 
 # MaskCOV migration
 
@@ -39,7 +25,7 @@ This fork also registers MaskCOV models and data readers migrated from
         --data-root /path/to/soybean_gene \
         -a maskcov_resnet50_quan \
         --pretrained /path/to/best_model.pth \
-        --act-bit-width 8 \
+        --act-bit-width 4 \
         --weight-bit-width 4
 
 * Evaluate a quantized checkpoint:
@@ -53,12 +39,8 @@ This fork also registers MaskCOV models and data readers migrated from
         --evaluate
 
 
-# Results:
 
-    \* Acc@1 69.146 Acc@5 88.670
 
-# Derivation of Eq.(5):
-<img src="eq5.png" width = "500" alt="Eq.5" align=center />
 
 
 
