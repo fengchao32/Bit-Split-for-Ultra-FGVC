@@ -1,0 +1,30 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training outputs, checkpoints, and generated quantization artifacts
+checkpoints/
+runs/
+logs/
+outputs/
+wandb/
+*.ckpt
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Local datasets
+data/*/
+datasets/
